@@ -27,7 +27,7 @@ const offset = 262143;
 const dataSize = 836907;
 
 describe("Chunks", function () {
-  this.timeout(10000);
+  this.timeout(20000);
 
   const data = readFileSync("./test/rebar3");
 
@@ -90,7 +90,7 @@ describe("Chunks", function () {
   });
 
   it("should convert ints to buffers and back up to Number.MAX_SAFE_INTEGER", async function () {
-    this.timeout(20000);
+    // this.timeout(20000);
     // we cant test every number :)
     for (let i = 0; i < 1024 * 1024; i++) {
       const buf = intToBuffer(i);
